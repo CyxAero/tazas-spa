@@ -4,12 +4,14 @@ import { Home } from "../pages/Home";
 import { Shop } from "../pages/Shop";
 import { About } from "../pages/About";
 import { Product } from "../pages/Product";
+import { NotFound } from "../pages/NotFound";
 
 const routes = {
 	"/": Home,
 	"/shop": Shop,
 	"/about": About,
-	"/product/:id": Product,
+  "/product/:id": Product,
+  "/404": NotFound,
 };
 
 export const router = {
