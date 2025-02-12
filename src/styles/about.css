@@ -23,6 +23,14 @@ section#about {
 			&.closing-blurb {
 				font-weight: 400;
 			}
+
+            @media (width <= 768px) {
+                font-weight: 400;
+
+                &.closing-blurb {
+                    font-weight: 500;
+                }
+            }
 		}
 	}
 }
