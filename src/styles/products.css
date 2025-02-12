@@ -5,8 +5,10 @@ section#product-details {
 	.product-header {
 		margin-block: 40px 32px;
 
-		a {
-			text-decoration: none;
+		button {
+            background-color: transparent;
+            color: var(--black);
+            border: none;
 			font-weight: bold;
 		}
 

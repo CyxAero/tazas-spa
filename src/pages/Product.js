@@ -15,14 +15,7 @@ export const Product = ({ id }) => {
 		return html`
 			<div class="error-container">
 				<h2>Product Not Found</h2>
-				<a
-					href="/"
-					@click=${(e) => {
-						e.preventDefault();
-						router.navigate("/");
-					}}
-					>Return to Shop</a
-				>
+        <button @click={() => router.navigateTo("/shop")}>RETURN TO SHOP</button>
 			</div>
 		`;
 	}
@@ -33,10 +26,15 @@ export const Product = ({ id }) => {
 	return html`
 		<section id="product-details">
 			<div class="product-header">
-				<a href="/shop">
+				<button
+					@click=${(e) => {
+						e.preventDefault();
+						router.navigateTo(`/shop`);
+					}}
+				>
 					<i class="ph-bold ph-arrow-left"></i>
 					<span>GO BACK TO SHOP</span>
-				</a>
+				</button>
 				<h1>product details</h1>
 			</div>
 			<section class="product-content">

@@ -1,5 +1,6 @@
 import { html } from "lit";
 import "../styles/home.css";
+import { router } from "../scripts/router";
 
 export const Home = () => {
 	return html`
@@ -12,11 +13,15 @@ export const Home = () => {
 					and more of them keep coming, aren&apos;t you happy that there's more
 					to be said and more to be done?
 				</p>
-				<a
-					href="/shop"
-					class="nav btn animated"
-					>EXPLORE CUPS</a
+				<button
+					class="btn animated"
+					@click=${(e) => {
+						e.preventDefault();
+						router.navigateTo("/shop");
+					}}
 				>
+					EXPLORE CUPS
+				</button>
 			</section>
 		</section>
 	`;
