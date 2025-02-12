@@ -1,0 +1,25 @@
+{
+  "name": "tazas-mpa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "@fontsource-variable/oswald": "^5.1.1",
+    "@fontsource-variable/playfair-display": "^5.1.1",
+    "@phosphor-icons/web": "^2.1.1",
+    "dexie": "^4.0.11",
+    "embla-carousel": "^8.5.2",
+    "embla-carousel-autoplay": "^8.5.2",
+    "lit": "^3.2.1",
+    "simple-notify": "^1.0.6"
+  }
+}

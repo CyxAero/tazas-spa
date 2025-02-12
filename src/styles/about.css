@@ -1,0 +1,28 @@
+section#about {
+	width: min(90%, 1200px);
+	margin-inline: auto;
+	padding-block-end: 40px;
+
+	h1 {
+		font-family: var(--playfair);
+		font-style: italic;
+		font-weight: 900;
+		font-size: 2.5rem;
+		margin-block-start: 40px;
+	}
+
+	section#our-story {
+		margin-block-start: 32px;
+
+		p {
+			margin-block-start: 20px;
+			font-size: 1.25rem;
+            font-weight: 300;
+			max-width: 80ch;
+
+			&.closing-blurb {
+				font-weight: 400;
+			}
+		}
+	}
+}

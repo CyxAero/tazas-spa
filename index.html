@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/vite.svg"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="./src/style.css"
+		/>
+		<title>TAZAS | Home</title>
+	</head>
+	<body>
+		<!-- ?HEADER -->
+		<header>
+			<div class="wrapper">
+				<!-- LOGO -->
+				<a
+					href="/"
+					class="logo"
+					data-link
+					>tazas</a
+				>
+				<!-- NAVIGATION -->
+				<div>
+					<nav>
+						<a
+							href="/shop"
+							data-link
+							>SHOP</a
+						>
+						<a
+							href="/about"
+							data-link
+							>ABOUT</a
+						>
+					</nav>
+					<span id="cart-open">CART</span>
+				</div>
+			</div>
+		</header>
+
+		<!-- ?CART -->
+		<dialog id="cart">
+			<section class="header">
+				<button id="cart-close">CLOSE</button>
+			</section>
+			<section class="cart-items">
+			</section>
+			<section class="cart-footer">
+				<div>
+					<span>TOTAL:</span>
+					<span id="total"></span>
+				</div>
+				<button class="btn animated">CHECKOUT</button>
+			</section>
+		</dialog>
+
+		<!-- ?MAIN APP -->
+		<main id="app"></main>
+
+		<!-- ?SCRIPT -->
+		<script
+			type="module"
+			src="./src/app.js"
+		></script>
+	</body>
+</html>

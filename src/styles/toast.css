@@ -1,0 +1,27 @@
+/* NOTIFICATION TOASTS */
+.sn-notifications-container {
+    /* colors */
+  --sn-success-color: var(--green);
+  --sn-success-progress-color: var(--green);
+  --sn-error-color: var(--red);
+  --sn-error-progress-color: var(--red);
+  --sn-warning-color: rgb(242, 201, 76);
+  --sn-warning-progress-color: rgb(196, 166, 79);
+  --sn-info-color: var(--black);
+  --sn-info-progress-color: var(--black);
+
+  /* container */
+  --sn-notifications-gap: 10px; /* controlled by js */
+  --sn-notifications-padding: 10px; /* controlled by js */
+
+  /* notify */
+  --sn-notify-radius: 0px;
+  --sn-notify-padding: 12px;
+  --sn-notify-icon-size: 20px;
+  --sn-notify-close-icon-size: 20px;
+  --sn-notify-border-size: 2px;
+}
+
+.toast-container {
+    background-color: var(--beige);
+}

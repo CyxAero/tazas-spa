@@ -1,0 +1,99 @@
+:root {
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Box Sizing Rules */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+/* Prevent Font Size Inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove Default Margin */
+/* body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+} */
+
+/* Remove List Styles on <ol> and <ul> With a List Role */
+ol[role="list"],
+ul[role="list"] {
+	list-style: none;
+}
+
+/* Set Core Body Defaults */
+body {
+	/* min-height: 100dvh; */
+	line-height: 1.5;
+}
+
+/* Set Shorter Line Heights on Headings and Interactive Elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance Text Wrapping on Headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* <a> Elements That Don't Have a Class Get Default Styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make Images Easier to Work With */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit Fonts For Inputs and Buttons */
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* Make Sure <textarea> Elements Without a `rows` Attribute are Not Tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything That Has Been Anchored to Should Have Extra Scroll Margin */
+:target {
+	scroll-margin-top: 5ex;
+}
