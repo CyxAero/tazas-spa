@@ -203,6 +203,7 @@ header {
 #cart {
 	position: fixed;
 	inset: 0 0 0 auto;
+    height: 100%;
 	border: none;
 	border-inline-start: 2px solid var(--black);
 	background-color: var(--beige);
