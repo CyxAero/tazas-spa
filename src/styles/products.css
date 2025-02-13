@@ -67,14 +67,13 @@ section#product-details {
 			}
 
 			.price {
-				font-size: 1.25rem;
+				font-size: var(--text-small);
 			}
 
 			.description {
 				padding-block: 20px;
                 font-weight: 300;
-			    font-size: 1.25rem;
-				/* font-size: 1.5rem; */
+			    font-size: var(--text-medium);
 			}
 		}
 	}

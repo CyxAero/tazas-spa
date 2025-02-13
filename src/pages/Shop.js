@@ -8,7 +8,6 @@ import { cart } from "../scripts/db-cart.js";
 export const Shop = () => {
 	const handleAddToCart = (productId) => {
     const clickedProduct = products.find(product => product.id === productId);
-    console.log(`Clicked products to add to cart: `, clickedProduct);
     cart.addItem(clickedProduct);
 	};
 
