@@ -19,9 +19,9 @@
 	--green: #99b69f;
 	--red: #ab3428;
 
-    --text-large: 1.75rem;
-    --text-medium: 1.5rem;
-    --text-small: 1.25rem;
+	--text-large: 1.75rem;
+	--text-medium: 1.5rem;
+	--text-small: 1.25rem;
 }
 
 /* MARK: PRIMITIVES */
@@ -72,6 +72,11 @@ body {
 	margin: 0;
 	padding: 0;
 
+	--grey: grey;
+	@media (width <= 768px) {
+		--grey: rgba(128, 128, 128, 0.45);
+	}
+
 	&:has(#cart[open]) {
 		overflow-y: hidden;
 	}
@@ -80,10 +85,6 @@ body {
 		overflow-y: hidden;
 		display: flex;
 		flex-direction: column;
-        --grey: grey;
-        @media (width <= 768px) {
-            --grey: rgba(128, 128, 128, 0.721);
-        }
 
 		/* TODO: Add background gradient */
 		/* #e5dcc5 */
@@ -117,26 +118,26 @@ body {
 	&:has(section#about) {
 		/* radial-gradient(circle, var(--beige) 21%, transparent 100%) */
 		/* e5dcc5 */
-        /* #e5dcc500 */
+		/* #e5dcc500 */
 		background: radial-gradient(
 				circle at 100% 0%,
 				transparent 17%,
 				var(--beige) 42%
 			),
 			repeating-linear-gradient(
-				grey,
-				grey 1px,
+				var(--grey),
+				var(--grey) 1px,
 				transparent 1px,
 				transparent 40px
 			),
-            repeating-linear-gradient(
-                to right,
-                grey,
-                grey 1px,
-                transparent 1px,
-                transparent 40px
-            ),
-            var(--beige);
+			repeating-linear-gradient(
+				to right,
+				var(--grey),
+				var(--grey) 1px,
+				transparent 1px,
+				transparent 40px
+			),
+			var(--beige);
 		/* background: radial-gradient(
 				circle at 100% 0%,
                 rgba(229, 220, 197, 0) 17%,
@@ -211,7 +212,7 @@ header {
 #cart {
 	position: fixed;
 	inset: 0 0 0 auto;
-    height: 100%;
+	height: 100%;
 	border: none;
 	border-inline-start: 2px solid var(--black);
 	background-color: var(--beige);
@@ -233,7 +234,7 @@ header {
 
 	@media (width <= 768px) {
 		width: 100%;
-        height: 100dvh;
+		height: 100dvh;
 		border: none;
 	}
 
