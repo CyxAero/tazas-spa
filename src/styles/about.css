@@ -16,7 +16,7 @@ section#about {
 
 		p {
 			margin-block-start: 20px;
-			font-size: 1.25rem;
+			font-size: var(--text-medium);
             font-weight: 300;
 			max-width: 80ch;
 
