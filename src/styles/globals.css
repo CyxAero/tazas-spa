@@ -80,20 +80,24 @@ body {
 		overflow-y: hidden;
 		display: flex;
 		flex-direction: column;
+        --grey: grey;
+        @media (width <= 768px) {
+            --grey: rgba(128, 128, 128, 0.721);
+        }
 
 		/* TODO: Add background gradient */
 		/* #e5dcc5 */
 		background: linear-gradient(transparent, var(--beige) 70%),
 			repeating-linear-gradient(
-				grey,
-				grey 1px,
+				var(--grey),
+				var(--grey) 1px,
 				transparent 1px,
 				transparent 40px
 			),
 			repeating-linear-gradient(
 					to right,
-					grey,
-					grey 1px,
+					var(--grey),
+					var(--grey) 1px,
 					transparent 1px,
 					transparent 40px
 				)
