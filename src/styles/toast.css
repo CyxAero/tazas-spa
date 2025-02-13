@@ -24,4 +24,8 @@
 
 .toast-container {
     background-color: var(--beige);
+
+    @media (width <= 768px) {
+        scale: 0.75;
+    }
 }

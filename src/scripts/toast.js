@@ -6,7 +6,7 @@ export function pushNotify(
 	title = "Notification",
 	message,
 	type,
-	position = "bottom right"
+	position = "right bottom"
 ) {
 	new Notify({
 		status: type,
