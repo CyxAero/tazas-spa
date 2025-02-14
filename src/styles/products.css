@@ -21,6 +21,7 @@ section#product-details {
 	}
 
 	.product-content {
+        animation: home-reveal 0.5s cubic-bezier(0.36, 0, 0.64, 1) forwards;
 		margin-block-end: 40px;
 		display: grid;
 		gap: 32px;
@@ -55,7 +56,6 @@ section#product-details {
 
 		.product-info {
 			grid-area: info;
-            animation: home-reveal 0.5s cubic-bezier(0.36, 0, 0.64, 1) forwards;
 
 			h1 {
 				font-weight: 700;

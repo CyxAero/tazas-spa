@@ -3,6 +3,10 @@ section#about {
 	margin-inline: auto;
 	padding-block-end: 40px;
 
+    h1, section#our-story {
+        animation: home-reveal 0.5s cubic-bezier(0.36, 0, 0.64, 1) forwards;
+    }
+
 	h1 {
 		font-family: var(--playfair);
 		font-style: italic;
