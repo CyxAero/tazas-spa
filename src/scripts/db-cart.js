@@ -64,9 +64,7 @@ export const cart = {
 
 	async updateQuantity(dbId, newQuantity) {
 		try {
-			if (newQuantity < 1) {
-				await this.removeItem(dbId);
-			} else {
+			if (newQuantity >= 1) {
 				await db.cartItems.update(dbId, { quantity: newQuantity });
 			}
 			await this.updateCartUI();
@@ -75,42 +73,52 @@ export const cart = {
 		}
 	},
 
-	async updateCartUI() {
+  async updateCartUI() {
+    console.log(`Running updateCartUI() function...`);
 		const items = await db.cartItems.toArray();
 		const cartItemsContainer = document.querySelector("#cart .cart-items");
 		const totalElement = document.querySelector("#cart .cart-footer #total");
 
-		if (!cartItemsContainer) return;
+    if (!cartItemsContainer) return;
 
-		cartItemsContainer.innerHTML = items
-			.map(
-				(item) => `
-      <section class="cart-item" data-id="${item.dbId}">
-        <section>
-          <img src="${item.image}" alt="${item.name}" loading="lazy" />
+    if (items.length > 0) {
+      cartItemsContainer.innerHTML = items
+        .map(
+          (item) => `
+        <section class="cart-item" data-id="${item.dbId}">
           <section>
-            <div class="title-and-price">
-              <span class="title">${item.name}</span>
-              <span class="price">$${item.price}</span>
-            </div>
-            <div class="amount-actions">
-              <i class="ph ph-minus-circle action" onclick="cart.updateQuantity(${
-								item.dbId
-							}, ${item.quantity - 1})"></i>
-              <span class="amount">${item.quantity}</span>
-              <i class="ph ph-plus-circle action" onclick="cart.updateQuantity(${
-								item.dbId
-							}, ${item.quantity + 1})"></i>
-            </div>
+            <img src="${item.image}" alt="${item.name}" loading="lazy" />
+            <section>
+              <div class="title-and-price">
+                <span class="title">${item.name}</span>
+                <span class="price">$${item.price}</span>
+              </div>
+              <div class="amount-actions">
+                <i class="ph ph-minus-circle action" onclick="cart.updateQuantity(${
+                  item.dbId
+                }, ${item.quantity - 1})"></i>
+                <span class="amount">${item.quantity}</span>
+                <i class="ph ph-plus-circle action" onclick="cart.updateQuantity(${
+                  item.dbId
+                }, ${item.quantity + 1})"></i>
+              </div>
+            </section>
           </section>
+          <span class="remove-item" onclick="cart.removeItem(${
+            item.dbId
+          })">REMOVE</span>
         </section>
-        <span class="remove-item" onclick="cart.removeItem(${
-					item.dbId
-				})">REMOVE</span>
-      </section>
-    `
-			)
-			.join("");
+      `
+        )
+        .join("");
+    } else {
+      cartItemsContainer.innerHTML = `
+        <section class="empty-state">
+          <p>You haven't added any items to your cart yet.</p>
+        </section>
+      `;
+    }
+
 
 		const total = items.reduce(
 			(sum, item) => sum + item.price * item.quantity,
