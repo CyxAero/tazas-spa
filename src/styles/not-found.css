@@ -7,10 +7,11 @@ section#not-found {
     align-items: center;
 
     h1 {
+        text-align: center;
         font-family: var(--playfair);
 		font-weight: 900;
 		font-style: italic;
-        font-size: clamp(3.5rem, 20vh, 8rem);
+        font-size: clamp(3rem, 20vh, 7rem);
     }
 
     p {
