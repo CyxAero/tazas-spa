@@ -158,6 +158,13 @@ body {
 				)
 				var(--beige); */
 	}
+
+	&:has(section#not-found) {
+		main#app {
+			display: grid;
+			place-content: center;
+		}
+	}
 }
 
 /* MARK: HEADER */
