@@ -5,16 +5,19 @@ section#not-found {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     h1 {
         text-align: center;
         font-family: var(--playfair);
 		font-weight: 900;
 		font-style: italic;
-        font-size: clamp(3rem, 20vh, 7rem);
+        font-size: clamp(3rem, 15vh, 7rem);
+	margin-block-start: 4rem;
     }
 
     p {
+	text-align: center;
         font-size: var(--text-large);
         margin-block: 2rem;
     }
