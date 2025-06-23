@@ -54,7 +54,7 @@ export const router = {
 
 		// Handle static routes
 		// const page = routes[path] || null;
-		const page = routes[path] ? routes[path] : '/404';
+		const page = routes[path] ? routes[path] : routes['/404'];
 		if (page) {
 			render(page(), document.getElementById("app"));
 		}
